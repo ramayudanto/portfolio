@@ -35,20 +35,20 @@ const socials = [
 ];
 
 export default function Home() {
-  const [buttonText, setButtonText] = useState("Copy Email");
+  const [buttonText, setButtonText] = useState("hi@ramayudanto.com");
 
   const copyEmail = () => {
     navigator.clipboard.writeText("hi@ramayudanto.com");
     setButtonText("Email Copied");
     setTimeout(() => {
-      setButtonText("Copy Email");
+      setButtonText("hi@ramayudanto.com");
     }, 3000);
   };
   const posts = [
     {
       id: 1,
       title: "Case Study Title",
-      href: "#",
+      href: "/test1",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       imageUrl:
@@ -57,7 +57,7 @@ export default function Home() {
     {
       id: 2,
       title: "Case Study Title",
-      href: "#",
+      href: "/test2",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       imageUrl:
@@ -66,7 +66,7 @@ export default function Home() {
     {
       id: 3,
       title: "Case Study Title",
-      href: "#",
+      href: "/test3",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       imageUrl:
@@ -75,7 +75,7 @@ export default function Home() {
     {
       id: 4,
       title: "Case Study Title",
-      href: "#",
+      href: "/test4",
       description:
         "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
       imageUrl:
@@ -84,7 +84,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col p-4 min-h-screen max-w-[1440px] mx-auto sm:items-start sm:justify-center sm:p-24">
+    <main className="flex flex-col p-4 h-auto max-w-[1440px] mx-auto sm:items-start sm:justify-center sm:p-24">
       <h1>Rayhan Ramayudanto</h1>
       <p className="text-neutral-500">Digital Product Designer</p>
       <div className="flex gap-4 pt-3 -ml-4">
@@ -103,33 +103,33 @@ export default function Home() {
       </div>
       <button
         onClick={copyEmail}
-        className="mt-4 flex justify-center items-center gap-2 px-3 py-2 bg-white hover:bg-neutral-500 rounded-lg text-neutral-500 stroke-neutral-500 hover:stroke-neutral-500"
+        className="mt-4 flex justify-center items-center gap-2 px-3 py-2 bg-white hover:bg-neutral-200 rounded-lg text-neutral-500 stroke-neutral-500 hover:stroke-neutral-500"
       >
         <Mail color="neutral-500" stroke="1px" height={20} width={20} />
         {buttonText}
       </button>
-      <div className="w-full">
+      {/* <div className="w-full h-auto">
         <div className="w-full">
           <div className="w-full mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {posts.map((post) => (
               <a
                 href={post.href}
                 key={post.id}
-                className="flex flex-col items-start justify-between"
+                className="w-full h-full"
               >
-                <div className="relative w-full">
+                <div className="w-full">
                   <img
                     alt={post.title}
                     src={post.imageUrl}
                     className="aspect-[16/9] w-full rounded-lg bg-neutral-700 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
                   />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-neutral-500/10" />
+                  <div className=" inset-0 ring-1 ring-inset ring-neutral-500/10" />
                 </div>
                 <div className="max-w-xl py-4">
                   <div className="group flex flex-col gap-y-2">
                     <h3 className="text-lg font-semibold leading-6 text-neutral-200">
                       <p>
-                        <span className="absolute inset-0" />
+                        <span className=" inset-0" />
                         {post.title}
                       </p>
                     </h3>
@@ -142,7 +142,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
