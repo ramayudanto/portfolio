@@ -86,13 +86,13 @@ export default function Home() {
 
   return (
     <main className="flex flex-col p-4 h-auto max-w-[1440px] mx-auto sm:items-start sm:justify-center sm:p-24">
-      <img src="src/app/asset/memoji.png" className="w-4 h-4" alt="memoji" />
+      {/* <img src="src/app/asset/memoji.png" className="w-4 h-4" alt="memoji" />
       <Image
       src="/src/app/asset/memoji.png"
       width={36}
       height={16}
       alt="memoji"
-    />
+    /> */}
       <h1>Rayhan Ramayudanto</h1>
       <p className="text-neutral-500">Digital Product Designer</p>
       <div className="flex gap-4 pt-3 -ml-4">
