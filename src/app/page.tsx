@@ -10,6 +10,9 @@ import {
   Mail,
   Twitter,
 } from "iconoir-react";
+import PortfolioItemList from "../../components/PortfolioItemList";
+import PortfolioPage from "../../components/PortfolioPage";
+import { portfolioItems } from "./data";
 
 const metadata = {
   title: "Home",
@@ -85,7 +88,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col p-4 h-auto max-w-[1440px] mx-auto sm:items-start sm:justify-center sm:p-24">
+    <main className="flex flex-col p-4 h-auto max-w-[1920px] mx-auto sm:items-start sm:justify-center sm:p-8">
       {/* <img src="src/app/asset/memoji.png" className="w-4 h-4" alt="memoji" />
       <Image
       src="/src/app/asset/memoji.png"
@@ -93,16 +96,15 @@ export default function Home() {
       height={16}
       alt="memoji"
     /> */}
-      <h1>Rayhan Ramayudanto</h1>
+      <h1 className="">Rayhan Ramayudanto</h1>
       <p className="text-neutral-500">Digital Product Designer</p>
-      <div className="flex gap-4 pt-3 -ml-4">
+      <div className="flex gap-4 pt-4 -ml-4">
         {socials.map((social, index) => (
           <a
             key={index}
             href={social.link}
             target="_blank"
             className="flex gap-3 p-3 hover:bg-neutral-900 rounded-lg text-neutral-500 stroke-neutral-500 hover:stroke-neutral-500 hover:text-neutral-500"
-            rel="noopener noreferrer"
           >
             {social.icon}
             {social.name}
@@ -116,6 +118,11 @@ export default function Home() {
         <Mail color="neutral-500" stroke="1px" height={20} width={20} />
         {buttonText}
       </button>
+      <div className="h-16 w-full rounded-lg">
+      </div>
+      <div className="-m-2">
+      <PortfolioPage items={portfolioItems} />
+      </div>
       {/* <div className="w-full h-auto">
         <div className="w-full">
           <div className="w-full mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
