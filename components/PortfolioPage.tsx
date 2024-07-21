@@ -9,9 +9,9 @@ interface PortfolioPageProps {
 
 const PortfolioPage: React.FC<PortfolioPageProps> = ({ items }) => {
   return (
-    <>
+    <div className='-ml-2' >
       <PortfolioItemList items={items} />
-    </>
+    </div>
   );
 };
 

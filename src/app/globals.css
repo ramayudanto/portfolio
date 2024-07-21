@@ -16,6 +16,8 @@
   }
 }
 
+
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,6 +27,12 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+h1{
+  @apply text-4xl font-bold tracking-tight leading-none;
+
+}
+
 
 @layer utilities {
   .text-balance {

@@ -89,16 +89,9 @@ export default function Home() {
 
   return (
     <main className="flex flex-col p-4 h-auto max-w-[1920px] mx-auto sm:items-start sm:justify-center sm:p-8">
-      {/* <img src="src/app/asset/memoji.png" className="w-4 h-4" alt="memoji" />
-      <Image
-      src="/src/app/asset/memoji.png"
-      width={36}
-      height={16}
-      alt="memoji"
-    /> */}
-      <h1 className="">Rayhan Ramayudanto</h1>
-      <p className="text-neutral-500">Digital Product Designer</p>
-      <div className="flex gap-4 pt-4 -ml-4">
+      <p className="">Rayhan Ramayudanto</p>
+      <p className="text-neutral-500 mt-2">Digital Product Designer</p>
+      <div className="flex gap-4 pt-4 -ml-2">
         {socials.map((social, index) => (
           <a
             key={index}
@@ -113,51 +106,14 @@ export default function Home() {
       </div>
       <button
         onClick={copyEmail}
-        className="mt-4 flex justify-center items-center gap-2 px-3 py-2 bg-white hover:bg-neutral-200 rounded-lg text-neutral-500 stroke-neutral-500 hover:stroke-neutral-500"
+        className="mt-2 flex justify-center items-center gap-2 px-3 py-2 bg-white hover:bg-neutral-200 rounded-lg text-neutral-500 stroke-neutral-500 hover:stroke-neutral-500"
       >
         <Mail color="neutral-500" stroke="1px" height={20} width={20} />
         {buttonText}
       </button>
       <div className="h-16 w-full rounded-lg">
       </div>
-      <div className="-m-2">
       <PortfolioPage items={portfolioItems} />
-      </div>
-      {/* <div className="w-full h-auto">
-        <div className="w-full">
-          <div className="w-full mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-            {posts.map((post) => (
-              <a
-                href={post.href}
-                key={post.id}
-                className="w-full h-full"
-              >
-                <div className="w-full">
-                  <img
-                    alt={post.title}
-                    src={post.imageUrl}
-                    className="aspect-[16/9] w-full rounded-lg bg-neutral-700 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                  />
-                  <div className=" inset-0 ring-1 ring-inset ring-neutral-500/10" />
-                </div>
-                <div className="max-w-xl py-4">
-                  <div className="group flex flex-col gap-y-2">
-                    <h3 className="text-lg font-semibold leading-6 text-neutral-200">
-                      <p>
-                        <span className=" inset-0" />
-                        {post.title}
-                      </p>
-                    </h3>
-                    <p className="line-clamp-3 text-sm leading-6 text-neutral-500">
-                      {post.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div> */}
     </main>
   );
 }
