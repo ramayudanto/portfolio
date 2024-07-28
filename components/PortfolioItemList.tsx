@@ -8,7 +8,7 @@ interface PortfolioItemListProps {
 
 const PortfolioItemList: React.FC<PortfolioItemListProps> = ({ items }) => {
   return (
-    <div className="w-full grid max-w-2xl grid-cols-1 gap-6 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div className="w-full grid max-w-2xl grid-cols-1 gap-4 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {items.map((item: PortfolioItem) => (
         <div
           key={item["Item ID"]}
