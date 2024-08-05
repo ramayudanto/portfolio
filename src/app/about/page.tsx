@@ -1,9 +1,12 @@
-import React from 'react'
-export default function page() {
+import { FC } from 'react'
+import { motion } from 'framer-motion'
+
+const Page: FC = () => {
   return (
     <div>
       <p>about</p>
-      <button></button>
     </div>
   )
 }
+
+export default Page
